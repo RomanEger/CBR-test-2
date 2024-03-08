@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyQuotes.API", "CurrencyQuotes.API\CurrencyQuotes.API.csproj", "{50B24108-52EC-4AA5-8D60-36E511BB2D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyQuotes.Client", "CurrencyQuotes.Client\CurrencyQuotes.Client.csproj", "{C68E5E6F-C13C-4A04-A7CC-C5F344745F7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B24108-52EC-4AA5-8D60-36E511BB2D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B24108-52EC-4AA5-8D60-36E511BB2D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B24108-52EC-4AA5-8D60-36E511BB2D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B24108-52EC-4AA5-8D60-36E511BB2D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68E5E6F-C13C-4A04-A7CC-C5F344745F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68E5E6F-C13C-4A04-A7CC-C5F344745F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68E5E6F-C13C-4A04-A7CC-C5F344745F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68E5E6F-C13C-4A04-A7CC-C5F344745F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
