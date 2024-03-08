@@ -31,4 +31,27 @@ public class CurrencyController : ControllerBase
         
         return Ok(result);
     }
+    
+    [HttpGet("names")]
+    public async Task<IActionResult> GetNames()
+    {
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        var request = await _httpClient.GetAsync(_connectToCBR+DateTime.Now.ToString("dd/MM/yyyy"));
+        var response = new StringBuilder(await request.Content.ReadAsStringAsync());
+        var str = response.Replace(',', '.').ToString();
+        var xml = new XmlSerializer(typeof(ValCurs));
+        using TextReader reader = new StringReader(str);
+        var result = xml.Deserialize(reader) as ValCurs ?? new ValCurs();
+        var names = result.Valute.Select(x => (x.NumCode, x.Name));
+        var list = new List<ValName>();
+        foreach (var item in names)
+        {
+            list.Add(new ValName()
+            {
+                NumCode = item.NumCode,
+                Name = item.Name
+            });
+        }
+        return Ok(list);
+    }
 }
